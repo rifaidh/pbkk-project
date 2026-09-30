@@ -1,4 +1,4 @@
-# Laporan Dokumentasi Aplikasi: Student Registration (WPF)
+# Laporan Aplikasi: Student Registration (WPF)
 
 ## 1. Pendahuluan
 Aplikasi **Student Registration** adalah aplikasi desktop berbasis *Windows Presentation Foundation (WPF)* yang menggunakan bahasa C# untuk logika di balik layar.
