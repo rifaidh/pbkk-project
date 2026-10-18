@@ -4,6 +4,8 @@
 Aplikasi **Student Registration** adalah aplikasi desktop berbasis *Windows Presentation Foundation (WPF)* yang menggunakan bahasa C# untuk logika di balik layar.
 Aplikasi ini dirancang dengan tata letak dua kolom untuk memudahkan pengguna melakukan input data mahasiswa sekaligus melihat daftar data yang telah dimasukkan.
 
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/13bf910b-d4ea-45c1-879f-415f2473f95f" />
+
 ---
 
 ## 2. Desain Antarmuka Pengguna (`MainWindow.xaml`)
