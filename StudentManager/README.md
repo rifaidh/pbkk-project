@@ -13,7 +13,9 @@ Didukung oleh ADO.NET dan database PostgreSQL, sistem ini menyediakan performa t
 * **Pencarian Cepat**: Fitur pencarian data yang responsif.
 
 * **Panel Statistik**: Tampilan analisis statistik secara *real-time*.
-
+  
+<img width="800" alt="Screenshot 2026-10-19 013656" src="https://github.com/user-attachments/assets/8388f8fa-176b-4660-b4ff-e74a64675e58" />
+  
 ## 2. Arsitektur dan Teknologi
 
 ### Spesifikasi Teknologi
