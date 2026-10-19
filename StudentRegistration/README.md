@@ -5,6 +5,9 @@
 ## 1. PENDAHULUAN
 
 Aplikasi **Student Registration App** merupakan aplikasi desktop berbasis **WPF (Windows Presentation Foundation)** dan **C#** yang terhubung ke database **SQL Server**. Aplikasi ini digunakan untuk mencatat dan mengelola data mahasiswa serta program studi dengan menerapkan relasi database (*One-to-Many*) dan komponen akses data menggunakan **ADO.NET**.
+  
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/35d644ad-f3a7-4adb-ae32-3f2a569e577e" />
+  
 
 ## 2. ARSITEKTUR SISTEM & ALUR DATA
 
@@ -42,7 +45,9 @@ Aplikasi **Student Registration App** merupakan aplikasi desktop berbasis **WPF 
 ## 3. STRUKTUR & DESIGN SKEMA DATABASE
 
 Database **`StudentRegistrationDB`** terdiri dari 2 tabel utama yang terhubung dalam relasi **One-to-Many (1:N)**: Satu Program Studi dapat memiliki banyak Mahasiswa.
-
+  
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/01d2aa84-ac8c-4619-bc9c-4c89ebd1e527" />
+  
 ### 3.1 Tabel `Programs` (Master Program Studi)
 
 * **Deskripsi:** Menyimpan daftar program studi yang tersedia.
@@ -57,14 +62,10 @@ Database **`StudentRegistrationDB`** terdiri dari 2 tabel utama yang terhubung d
 | **IsActive** | `BIT` | **NOT NULL**, `DEFAULT 1` | Status aktif program studi (1 = Aktif, 0 = Nonaktif) | 
 | **CreatedAt** | `DATETIME2` | **NOT NULL**, `DEFAULT SYSDATETIME()` | Waktu data dibuat secara otomatis | 
 
-* **Contoh Isi Data (`Programs`):**
-
-| ProgramId | ProgramCode | ProgramName | IsActive | CreatedAt | 
-| ----- | ----- | ----- | ----- | ----- | 
-| 1 | TI | Teknik Informatika | 1 | 2026-10-19 08:00:00 | 
-| 2 | SI | Sistem Informasi | 1 | 2026-10-19 08:00:00 | 
-| 3 | MNJ | Manajemen | 1 | 2026-10-19 08:00:00 | 
-
+* **Tabel (`Programs`):**
+  
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/2679e19b-3faf-4c7d-96ed-9089c5c64419" />
+  
 
 ### 3.2 Tabel `Students` (Data Mahasiswa)
 
@@ -84,14 +85,10 @@ Database **`StudentRegistrationDB`** terdiri dari 2 tabel utama yang terhubung d
 | **CreatedAt** | `DATETIME2` | **NOT NULL**, `DEFAULT SYSDATETIME()` | Waktu data dibuat | 
 | **UpdatedAt** | `DATETIME2` | `NULL` | Waktu data terakhir diperbarui | 
 
-* **Contoh Isi Data (`Students`):**
-
-| StudentId | NIM | Name | ProgramId | BirthDate | Address | PhoneNumber | 
-| ----- | ----- | ----- | ----- | ----- | ----- | ----- | 
-| 1 | 20231001 | Ahmad Rizki | 1 | 2003-03-12 | Jl. Merdeka No. 123, Surabaya | 081234567890 | 
-| 2 | 20231002 | Siti Aisyah | 2 | 2004-07-21 | Jl. Diponegoro No. 45, Surabaya | 082233445566 | 
-| 3 | 20231003 | Budi Santoso | 1 | 2003-11-05 | Jl. Ahmad Yani No. 10, Surabaya | 081355667788 | 
-
+* **Tabel (`Students`):**
+  
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/7e4a6067-5076-4e16-9740-ece5df2ed6db" />
+  
 
 ## 4. STRUKTUR & PENJELASAN KODE PROGRAM (C# / WPF)
 
@@ -200,20 +197,14 @@ Pengujian dilakukan langsung pada **SQL Server (SSMS)** dan terintegrasi dengan 
 * **Query Test:**
 
   ```
-  SELECT s.StudentId, s.NIM, s.Name, p.ProgramName, s.BirthDate, s.PhoneNumber
+  SELECT s.NIM, s.Name, p.ProgramName, s.BirthDate, s.PhoneNumber
   FROM Students s
-  INNER JOIN Programs p ON s.ProgramId = p.ProgramId;
-  
+  INNER JOIN Programs p ON s.ProgramId = p.ProgramId
+  ORDER BY s.Name;
   ```
 
 * **Hasil Output Pengujian:**
-
-| StudentId | NIM | Name | ProgramName | BirthDate | PhoneNumber | 
-| ----- | ----- | ----- | ----- | ----- | ----- | 
-| 1 | 20231001 | Ahmad Rizki | Teknik Informatika | 2003-03-12 | 081234567890 | 
-| 2 | 20231002 | Siti Aisyah | Sistem Informasi | 2004-07-21 | 082233445566 | 
-| 3 | 20231003 | Budi Santoso | Teknik Informatika | 2003-11-05 | 081355667788 | 
-| 4 | 20231004 | Citra Lestari | Manajemen | 2004-01-18 | 089900112233 | 
-| 5 | 20231005 | Dimas Prayoga | Teknik Elektro | 2003-09-27 | 081288776655 | 
-
+  
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/705444e4-5791-4b45-8c41-9342c6de6754" />
+  
 * **Kesimpulan:** Query `INNER JOIN` berhasil memetakan kunci `ProgramId` menjadi nama program studi (`ProgramName`) secara tepat dan dapat ditampilkan secara otomatis pada `DataGrid` WPF melalui paket **ADO.NET** (`Microsoft.Data.SqlClient`).
