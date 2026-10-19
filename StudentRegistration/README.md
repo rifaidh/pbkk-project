@@ -163,7 +163,6 @@ Pengujian dilakukan langsung pada **SQL Server (SSMS)** dan terintegrasi dengan 
   ```
   INSERT INTO Students (NIM, Name, ProgramId)
   VALUES ('20231099', 'Test Student', 99);
-  
   ```
 
 * **Hasil Pengujian:** **GAGAL / DITOLAK** oleh SQL Server.
@@ -181,7 +180,6 @@ Pengujian dilakukan langsung pada **SQL Server (SSMS)** dan terintegrasi dengan 
   ```
   INSERT INTO Students (NIM, Name, ProgramId)
   VALUES ('20231001', 'Mahasiswa Duplikat', 1);
-  
   ```
 
 * **Hasil Pengujian:** **GAGAL / DITOLAK** oleh SQL Server.
