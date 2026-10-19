@@ -10,10 +10,10 @@
 
 ## Tabel Pengumpulan Tugas
 
-| Minggu | Topik / Judul Tugas | Link Repository / Progress | 
+| Minggu | Topik | Link Repository | 
 | ----- | ----- | ----- | 
-| **Week 2** | Latihan .NET Framework | \\ | 
-| **Week 3** | Dekstop Calculator App | \[Link\] | 
-| **Week 4** | WPF Student Registration App | \[Link\] | 
-| **Week 5** | WPF Student Manager | \[Link\] | 
-| **Week 6** | WPF Student Registration App (SQL Server) | \[Link\] | 
+| **Week 2** | Latihan .NET Framework | [.NET Framework](TM01) | 
+| **Week 3** | Dekstop Calculator App | [Calculator App](CalculatorApp) | 
+| **Week 4** | WPF Student Registration App | [Student Registration App](StudentRegistrationApp) | 
+| **Week 5** | WPF Student Manager | [Student Manager](StudentManager) | 
+| **Week 6** | WPF Student Registration App (SQL Server) | [Student Registration SQL](StudentRegistration) | 
